@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f3eefc">
+  <title>Apology Letter · Purple</title>
+  <style>
+    /* ----- MOBILE-FIRST RESET & BASE ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(160deg, #f3eefc 0%, #ede4ff 50%, #e8ddfb 100%);
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0.9rem 0.9rem 1.6rem;
+      line-height: 1.6;
+      color: #2e2235;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ----- LETTER CARD (mobile‑first, purple) ----- */
+    .letter {
+      width: 100%;
+      max-width: 540px;
+      background: #ffffff;
+      padding: 1.8rem 1.35rem 1.9rem;
+      border-radius: 28px;
+      box-shadow:
+        0 14px 26px -10px rgba(88, 40, 130, 0.18),
+        0 4px 10px -4px rgba(88, 40, 130, 0.06),
+        inset 0 1px 1px rgba(255, 255, 255, 0.9);
+      border: 1px solid #e6dbf5;
+      position: relative;
+      transition: transform 0.2s ease;
+      animation: softAppear 0.4s ease-out;
+    }
+
+    @keyframes softAppear {
+      0% { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* decorative heart (purple accent) */
+    .letter::before {
+      content: "❤";
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      font-size: 1.7rem;
+      opacity: 0.22;
+      color: #9b59c9;
+      transform: rotate(8deg);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    /* ----- HEADER ----- */
+    .letter-header {
+      text-align: center;
+      margin-bottom: 1.4rem;
+      position: relative;
+      padding-right: 1.2rem;
+    }
+
+    .letter-header h1 {
+      font-size: 1.75rem;
+      font-weight: 340;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #7d3fa8;
+      margin-bottom: 0.4rem;
+      word-spacing: 4px;
+      line-height: 1.2;
+    }
+
+    .letter-header .subhead {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: #8a6ba3;
+      font-style: italic;
+      border-bottom: 1px dashed #d8c5ee;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      padding-inline: 0.8rem;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    /* ----- SALUTATION & BODY TEXT ----- */
+    .salutation {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: #4b3258;
+      letter-spacing: -0.1px;
+    }
+
+    .letter-body p {
+      margin-bottom: 1.2rem;
+      font-size: 1.02rem;
+      font-weight: 350;
+      color: #3a2a45;
+      text-align: left;
+      word-spacing: 0.2px;
+      line-height: 1.65;
+    }
+
+    .letter-body p:last-of-type {
+      margin-bottom: 0.2rem;
+    }
+
+    /* apology emphasis (purple) */
+    .apology-highlight {
+      background: #f6efff;
+      padding: 0.2rem 0.65rem;
+      border-radius: 50px;
+      font-weight: 420;
+      color: #6d2f96;
+      border-left: 4px solid #a86bd6;
+      margin: 0.5rem 0 0.9rem 0;
+      font-style: italic;
+      display: inline-block;
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    /* ----- ORNAMENT ----- */
+    .ornament {
+      text-align: center;
+      color: #c9aee6;
+      letter-spacing: 5px;
+      font-size: 0.95rem;
+      margin: 0.7rem 0 1rem 0;
+      opacity: 0.9;
+      user-select: none;
+    }
+
+    /* ----- SIGNATURE ----- */
+    .signature {
+      margin-top: 1.6rem;
+      border-top: 1px solid #eadff7;
+      padding-top: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .signature .closing {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #7a5c8c;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.3px;
+    }
+
+    .signature .name {
+      font-family: 'Brush Script MT', 'Segoe Script', 'Dancing Script', cursive;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #7d3fa8;
+      line-height: 1.2;
+      margin-top: 0.1rem;
+      margin-right: 0.5rem;
+      transform: rotate(-1.5deg);
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    .signature .date {
+      font-size: 0.8rem;
+      color: #a48dbb;
+      margin-top: 0.6rem;
+      font-weight: 300;
+      letter-spacing: 0.6px;
+    }
+
+    /* ----- LARGER SCREENS ----- */
+    @media (min-width: 481px) {
+      body {
+        padding: 1.8rem 1.2rem;
+        align-items: center;
+      }
+
+      .letter {
+        padding: 2.2rem 2rem 2.1rem;
+        border-radius: 32px;
+      }
+
+      .letter-header h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+      }
+
+      .letter-header .subhead {
+        font-size: 0.92rem;
+      }
+
+      .salutation {
+        font-size: 1.3rem;
+      }
+
+      .letter-body p {
+        font-size: 1.05rem;
+      }
+
+      .apology-highlight {
+        font-size: 1rem;
+        padding: 0.25rem 0.8rem;
+      }
+
+      .signature .name {
+        font-size: 2.2rem;
+      }
+
+      .letter::before {
+        font-size: 2rem;
+        top: 1.4rem;
+        right: 1.8rem;
+      }
+    }
+
+    /* ----- VERY SMALL PHONES (≤360px) ----- */
+    @media (max-width: 360px) {
+      body {
+        padding: 0.6rem 0.6rem 1.2rem;
+      }
+
+      .letter {
+        padding: 1.5rem 1rem 1.6rem;
+        border-radius: 22px;
+      }
+
+      .letter-header h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1.2px;
+      }
+
+      .letter-header .subhead {
+        font-size: 0.78rem;
+        white-space: normal;
+        padding-inline: 0.5rem;
+      }
+
+      .salutation {
+        font-size: 1.1rem;
+      }
+
+      .letter-body p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .apology-highlight {
+        font-size: 0.9rem;
+        padding: 0.15rem 0.5rem;
+      }
+
+      .signature .name {
+        font-size: 1.7rem;
+      }
+
+      .signature .closing {
+        font-size: 0.92rem;
+      }
+
+      .ornament {
+        letter-spacing: 3px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* ----- LANDSCAPE ----- */
+    @media (max-height: 480px) and (orientation: landscape) {
+      body {
+        align-items: flex-start;
+        padding: 0.8rem;
+      }
+
+      .letter {
+        padding: 1.5rem 1.8rem;
+      }
+
+      .letter-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .letter-body p {
+        font-size: 0.98rem;
+        margin-bottom: 1rem;
+      }
+
+      .signature {
+        margin-top: 1.2rem;
+        padding-top: 1rem;
+      }
+    }
+
+    /* ----- DARK MODE (purple‑tinted) ----- */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(160deg, #211a29 0%, #1a1420 100%);
+      }
+
+      .letter {
+        background: #26202e;
+        border-color: #45355a;
+        box-shadow:
+          0 14px 26px -10px rgba(0, 0, 0, 0.55),
+          inset 0 1px 1px rgba(255, 255, 255, 0.05);
+      }
+
+      .letter-header h1 {
+        color: #c39ae8;
+      }
+
+      .letter-header .subhead {
+        color: #a48dbb;
+        border-bottom-color: #4a3a5c;
+      }
+
+      .salutation {
+        color: #d9c9e8;
+      }
+
+      .letter-body p {
+        color: #d3c3e0;
+      }
+
+      .apology-highlight {
+        background: #34283f;
+        color: #d9b3f0;
+        border-left-color: #a86bd6;
+      }
+
+      .ornament {
+        color: #7a5c8c;
+      }
+
+      .signature {
+        border-top-color: #45355a;
+      }
+
+      .signature .closing {
+        color: #b39cc8;
+      }
+
+      .signature .name {
+        color: #c39ae8;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+      }
+
+      .signature .date {
+        color: #8a6ba3;
+      }
+
+      .letter::before {
+        color: #b07fe0;
+        opacity: 0.28;
+      }
+    }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      .letter {
+        animation: none;
+        transition: none;
+      }
+      .letter:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="letter">
+    <div class="letter-header">
+      <h1>I'm Sorry</h1>
+      <div class="subhead">from the bottom of my heart</div>
+    </div>
+
+    <div class="letter-body">
+      <div class="salutation">My babi,</div>
+
+      <p>
+        I've been sitting here thinking about everything that happened, and I 
+        can't find the right words to express how deeply sorry I am. 
+        <span class="apology-highlight">I was wrong.</span> 
+        There's no excuse for my words and actions, and I know I hurt you.
+      </p>
+
+      <p>
+        You mean more to me than I can ever say. The thought of causing you 
+        pain weighs heavily on my heart. I've replayed the moment over and 
+        over, wishing I could take it back — but since I can't, I want you to 
+        know that I see my mistake, and I'm truly, genuinely sorry.
+      </p>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <p>
+        I'm not asking for anything. I just needed you to know how much 
+        I regret my actions and how much I value you. If you need space, 
+        I understand. If you want to talk, I'm here. And if you can find 
+        it in your heart to forgive me, I promise to learn from this and 
+        be better.
+      </p>
+
+      <p>
+        Thank you for taking the time to read this. Whatever you decide, 
+        please know that I care about you deeply.
+      </p>
+    </div>
+
+    <div class="signature">
+      <div class="closing">With all my sincerity,</div>
+      <div class="name">Justine</div>
+      <div class="date">— June 2025 —</div>
+    </div>
+  </main>
+</body>
+</html>
